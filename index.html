@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <script>
-    let firstName = "Andrew";
-    let lastName = "Huntington";
-    alert("hello, world!");
-    console.log(firstName, lastName);
+    const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday",
+                           "Thursday", "Friday", "Saturday"]
+    let now = new Date();
+    let dayName = daysOfTheWeek[now.getDay()];
+    alert(`Hello, world! Happy ${dayName}.`);
   </script>
   <title>Learn Enough JavaScript</title>
   <meta charset="UTF-8">
