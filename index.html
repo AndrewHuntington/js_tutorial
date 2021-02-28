@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="day.js"></script>
   <script>
-    const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday",
-                           "Thursday", "Friday", "Saturday"]
     let now = new Date();
-    let dayName = daysOfTheWeek[now.getDay()];
-    alert(`Hello, world! Happy ${dayName}.`);
+    alert(greeting(now));
   </script>
   <title>Learn Enough JavaScript</title>
   <meta charset="UTF-8">
