@@ -12,7 +12,10 @@
 
 // // Returns the last element of an array.
 // Array.prototype.last = function() {
-//   return this[this.length-1];
+//   // return this[this.length-1];
+
+//   // Using slice
+//   return this.slice(-1)[0];
 // }
 
 // Adds `reverse` to all strings.
