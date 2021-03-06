@@ -1,0 +1,27 @@
+#!/home/andy/.nvm/versions/node/v14.15.5/bin/node
+
+let urllib = require('urllib');
+let Phrase = require("andyh-palindrome");
+let url = 'https://cdn.learnenough.com/phrases.txt'
+
+urllib.request(url, { followRedirect: true }, function(error, data, response) {
+  let body = data.toString();
+  body.split("\n").forEach(function(line) {
+    let phrase = new Phrase(line);
+    if (phrase.palindrome()) {
+      console.log("plaindrome detected:", line);
+    }
+  });
+});
+
+
+// // Exercise 10.2.1
+// urllib.request(url, { followRedirect: true }, function(error, data, response) {
+//   let body = data.toString();
+//   let lines = body.split("\n");
+//   let palindromes = lines.filter(line => new Phrase(line).palindrome());
+
+//   palindromes.forEach(function(palindrome) {
+//     console.log("plaindrome detected:", palindrome);
+//   });
+});
